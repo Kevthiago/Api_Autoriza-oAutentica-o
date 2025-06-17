@@ -1,9 +1,103 @@
 # 🚀 API de Autenticação e Autorização JWT (Emissão e Validação Interna)
 
-Este roteiro te guiará na construção de uma API Spring Boot que é o coração da sua autenticação.  
+Este é um projeto de avaliação que utiliza **Spring Boot** e **H2 Database** para gerenciar um sistema de **Login** e **Validação**.
 Ela será responsável por gerar tokens JWT para usuários que fizerem login e por validar esses mesmos tokens para proteger seus próprios recursos.
 
 Abordaremos as melhores práticas de **segurança**, **testabilidade** e **documentação**.
+
+---
+
+
+## 🚀 Tecnologias Utilizadas
+
+As tecnologias utilizadas neste projeto estão agrupadas em categorias conforme sua função no desenvolvimento da API.
+
+
+### 1. 🔧 Núcleo do Desenvolvimento (Linguagem e Framework)
+
+- **Java 21**  
+  Linguagem principal utilizada para escrever toda a lógica da aplicação.
+
+- **Spring Boot**  
+  Framework que simplifica a configuração e construção de aplicações Java modernas.
+
+- **spring-boot-starter-web**  
+  Dependência essencial para criar APIs RESTful com suporte a controladores (`@RestController`) e mapeamentos de rotas (`@GetMapping`, `@PostMapping`, etc).
+
+
+### 2. 🔐 Camada de Segurança e Autenticação
+
+- **Spring Security**  
+  Módulo de segurança do Spring utilizado para autenticação, autorização e proteção contra ameaças.
+
+- **spring-boot-starter-security**  
+  Fornece a base para o controle de acesso à aplicação.
+
+- **spring-boot-starter-oauth2-resource-server**  
+  Configura a API como um Servidor de Recursos, validando automaticamente os tokens JWT recebidos nas requisições protegidas.
+
+- **BCryptPasswordEncoder**  
+  Algoritmo utilizado para fazer o hash das senhas antes de armazená-las no banco de dados.
+
+- **Java JWT (com.auth0:java-jwt)**  
+  Biblioteca para geração e validação programática dos tokens JWT no serviço de autenticação (`JwtService`).
+
+
+### 3. 🗄️ Persistência de Dados (Banco de Dados)
+
+- **JPA (Java Persistence API)**  
+  Especificação que permite o mapeamento objeto-relacional (ORM) entre entidades Java e tabelas do banco de dados.
+
+- **spring-boot-starter-data-jpa**  
+  Abstrai operações do banco de dados por meio de repositórios como `JpaRepository`.
+
+- **H2 Database (com.h2database:h2)**  
+  Banco de dados relacional em memória, ideal para testes e ambiente de desenvolvimento.
+
+
+### 4. ⚙️ Ferramentas de Produtividade e Desenvolvimento
+
+- **Apache Maven**  
+  Gerenciador de dependências e ferramenta de build que lê o `pom.xml` e empacota a aplicação em um `.jar`.
+
+- **Lombok (org.projectlombok:lombok)**  
+  Biblioteca que reduz o código boilerplate com anotações como `@Data`, `@Builder`, `@AllArgsConstructor`, entre outras.
+
+- **Spring Boot DevTools**  
+  Melhora a produtividade com recursos como hot reload durante o desenvolvimento.
+
+
+### 5. ✅ Testes e Validação
+
+- **JUnit 5**  
+  Framework de testes unitários e de integração amplamente utilizado no ecossistema Java.
+
+- **Mockito**  
+  Biblioteca para criação de mocks, facilitando testes isolados e controlados.
+
+- **MockMvc**  
+  Ferramenta do Spring para simular chamadas HTTP em controladores, sem necessidade de subir o servidor.
+
+- **Apache JMeter**  
+  Ferramenta para testes de carga, usada para simular múltiplos usuários e medir o desempenho da API.
+
+
+### 6. 📘 Documentação da API
+
+- **OpenAPI 3 / Swagger**  
+  Especificação para descrever APIs RESTful de forma padronizada.
+
+- **Springdoc (springdoc-openapi-starter-webmvc-ui)**  
+  Gera automaticamente uma documentação interativa da API, acessível via Swagger UI.
+
+
+### 7. 🗂️ Entrega e Versionamento
+
+- **Git**  
+  Sistema de controle de versão utilizado para rastrear e gerenciar mudanças no código-fonte.
+
+- **GitHub**  
+  Plataforma de hospedagem de código, usada para colaboração, versionamento e publicação do projeto.
 
 ---
 
@@ -259,3 +353,13 @@ Para acessar a documentação e interagir com os endpoints:
 
 - Inicie a aplicação
 - Acesse: `http://localhost:8080/swagger-ui.html`
+
+---
+
+## Desenvolvido por
+
+**Kevin Thiago dos Santos**
+
+Este projeto foi desenvolvido como parte do trabalho prático final para a disciplina de Arquitetura Web, utilizando o Spring Boot, H2 Database, e RESTful APIs.
+
+---
