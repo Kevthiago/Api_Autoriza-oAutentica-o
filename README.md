@@ -81,6 +81,9 @@ As tecnologias utilizadas neste projeto estão agrupadas em categorias conforme 
 - **Apache JMeter**  
   Ferramenta para testes de carga, usada para simular múltiplos usuários e medir o desempenho da API.
 
+- **Postman**  
+  Ferramenta gráfica utilizada para testar manualmente os endpoints da API durante o desenvolvimento e validação da lógica.
+
 
 ### 6. 📘 Documentação da API
 
@@ -360,6 +363,8 @@ Para acessar a documentação e interagir com os endpoints:
 
 **Kevin Thiago dos Santos**
 
-Este projeto foi desenvolvido como parte do trabalho prático final para a disciplina de Arquitetura Web, utilizando o Spring Boot, H2 Database, e RESTful APIs.
+Este projeto foi desenvolvido como parte do trabalho prático final da disciplina de Arquitetura Web, utilizando as seguintes tecnologias:
+
+`Java 21, Spring Boot 3.x, spring-boot-starter-web, Spring Security, spring-boot-starter-oauth2-resource-server, BCryptPasswordEncoder, Java JWT (com.auth0:java-jwt), JPA (Java Persistence API) com spring-boot-starter-data-jpa, H2 Database (com.h2database:h2), Apache Maven, Lombok (org.projectlombok:lombok), Spring Boot DevTools, JUnit 5, Mockito, MockMvc, Apache JMeter, OpenAPI 3 / Swagger com Springdoc (springdoc-openapi-starter-webmvc-ui), Git e GitHub.`
 
 ---
